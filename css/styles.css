@@ -1,0 +1,16 @@
+#results {
+  display: none;
+  border: 1px solid red;
+}
+
+.leftBar {
+  background-color:#cde364;
+	background-image: radial-gradient(#fff 10%, transparent 10%),
+	radial-gradient(#fff 10%, transparent 10%);
+	background-size: 30px 30px;
+	background-position: 0 0, 15px 15px;
+}
+
+.pizzaList {
+  border: 1px dotted black;
+}
