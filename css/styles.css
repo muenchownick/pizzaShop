@@ -1,6 +1,7 @@
 #results {
   display: none;
   border: 1px solid red;
+  padding: 10px;
 }
 
 .leftBar {
@@ -9,8 +10,31 @@
 	radial-gradient(#fff 10%, transparent 10%);
 	background-size: 30px 30px;
 	background-position: 0 0, 15px 15px;
+  text-align: center;
+  margin-right: 10px;
+}
+.rightBar {
+  border: 1px solid black;
+  background-color: #cc6633;
+  margin-left: 20px;
 }
 
 .pizzaList {
   border: 1px dotted black;
+  display: none;
+}
+
+body {
+  background: #FFCC99;
+}
+
+.header {
+  text-align: center;
+  font-style: oblique;
+  text-decoration: underline;
+}
+
+img {
+  width: 100%;
+  height: 100%;
 }

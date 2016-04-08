@@ -20,7 +20,7 @@ Pizza.prototype.price = function() {
     for (i = 0; i < meat.length; i++) {
     if (this.meat[i] === "sausage") {
       totalPrice += 1;
-    }if (this.meat[i] === "bacon") {
+    } else if (this.meat[i] === "bacon") {
       totalPrice += 1.5;
     }}
 
@@ -58,10 +58,13 @@ $(document).ready(function() {
           cheese.push($(this).val());
          });
 
+         $(".pizzaList").show();
+
           meat = [];
           veggie = [];
+          cheese = [];
 
-          $("#pizzaList").append("<li><span class='contact'>" + pizza.size + "</span></li>")
+          $("#pizzaList").append("<li><span class='contact'>" + pizza.size + "</span></li>");
 
           $(".contact").last().click(function(){
             $("#results").show();
@@ -69,7 +72,12 @@ $(document).ready(function() {
             $(".size-location").text(pizza.size);
             $(".meat-location").text(pizza.meat);
             $(".veggie-location").text(pizza.veggie);
+            $(".cheese-location").text(pizza.cheese);
             $(".price-location").text(pizza.price());
+
+            console.log(pizza.veggie);
+            console.log(pizza.meat);
+            console.log(pizza.cheese);
 
     event.preventDefault();
   });
