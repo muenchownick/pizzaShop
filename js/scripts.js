@@ -2,12 +2,14 @@
 var cheese = [];
 var meat = [];
 var veggie = [];
+
 var Pizza = function(size, meat, veggie, cheese) {
   this.size = size;
   this.meat = meat;
   this.veggie = veggie;
   this.cheese = cheese;
 }
+
 Pizza.prototype.price = function() {
   var totalPrice = 8
 
@@ -40,7 +42,6 @@ Pizza.prototype.price = function() {
   return totalPrice;
 };
 
-
 // user interface logic
 $(document).ready(function() {
   $("form#blank").submit(function() {
@@ -57,18 +58,18 @@ $(document).ready(function() {
           cheese.push($(this).val());
          });
 
-         meat = [];
-         veggie = [];
+          meat = [];
+          veggie = [];
 
-        $("#pizzaList").append("<li><span class='contact'>" + pizza.size + "</span></li>")
+          $("#pizzaList").append("<li><span class='contact'>" + pizza.size + "</span></li>")
 
-      $(".contact").last().click(function(){
-      $("#results").show();
+          $(".contact").last().click(function(){
+            $("#results").show();
 
-      $(".size-location").text(pizza.size);
-      $(".meat-location").text(pizza.meat);
-      $(".veggie-location").text(pizza.veggie);
-      $(".price-location").text(pizza.price());
+            $(".size-location").text(pizza.size);
+            $(".meat-location").text(pizza.meat);
+            $(".veggie-location").text(pizza.veggie);
+            $(".price-location").text(pizza.price());
 
     event.preventDefault();
   });
