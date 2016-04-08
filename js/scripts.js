@@ -8,9 +8,6 @@ var Pizza = function(size, meat, veggie, cheese) {
   this.veggie = veggie;
   this.cheese = cheese;
 }
-// Pizza.protoype.name= function() {
-//
-// }
 Pizza.prototype.price = function() {
   var totalPrice = 8
 
@@ -40,7 +37,6 @@ Pizza.prototype.price = function() {
   } else if (this.size === "large") {
     totalPrice += 6;
   }
-
   return totalPrice;
 };
 
